@@ -1,27 +1,46 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.yoogesh.engine</groupId>
+  <groupId>com.yoogesh.rule</groupId>
   <artifactId>RuleEngine</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  
-   <dependencies>
-  	   <dependency>
+  <version>1.0.0</version>
+
+<properties>
+		<maven.compiler.source>13</maven.compiler.source>
+		<maven.compiler.target>13</maven.compiler.target>
+		<java.version>13</java.version>
+		<drools.version>6.4.0.Final</drools.version>
+</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.kie</groupId>
+			<artifactId>kie-api</artifactId>
+			<version>${drools.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.drools</groupId>
+			<artifactId>drools-core</artifactId>
+			<version>${drools.version}</version>
+		</dependency>
+		<dependency>
 			<groupId>org.drools</groupId>
 			<artifactId>drools-compiler</artifactId>
-			<version>6.0.1.Final</version>
+			<version>${drools.version}</version>
 		</dependency>
-    </dependencies>
-  
-  <build>
-    <sourceDirectory>src</sourceDirectory>
-    <plugins>
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.1</version>
-        <configuration>
-          <release>14</release>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
+		
+		
+		<dependency>
+    <groupId>org.drools</groupId>
+     <artifactId>drools-decisiontables</artifactId>
+     <version>${drools.version}</version>
+   </dependency>
+		
+        <dependency>
+            <groupId>org.kie</groupId>
+            <artifactId>kie-ci</artifactId>
+            <version>${drools.version}</version>
+         </dependency>
+		 
+	</dependencies>
+
+
 </project>
